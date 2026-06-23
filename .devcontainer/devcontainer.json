@@ -1,0 +1,21 @@
+{
+  "name": "OpenClaw",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "docker pull ghcr.io/openclaw/openclaw:latest",
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "OpenClaw",
+      "onAutoForward": "notify"
+    }
+  },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb",
+    "storage": "32gb"
+  }
+}
+
